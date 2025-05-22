@@ -276,66 +276,179 @@
 }
 
 /* Usage Section Styles */
-.usage-content {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
+.usage-section {
+  padding: 4rem 0;
 }
 
-.usage-content.light {
-  background-color: #ffffff;
-}
-
-.usage-content.dark {
-  background-color: #1f2937;
-}
-
-.steps-container {
+.controls {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.control-button {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.control-button.light {
+  background-color: #f0f0f0;
+}
+
+.control-button.dark {
+  background-color: #2a2a2a;
+}
+
+.control-button:hover {
+  transform: scale(1.1);
+  background-color: #007AFF;
+  color: white;
+}
+
+.progress-bar {
+  display: flex;
+  margin-bottom: 2rem;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar.light {
+  background: #f0f0f0;
+}
+
+.progress-bar.dark {
+  background: #2a2a2a;
+}
+
+.progress-step {
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.progress-step.light {
+  background-color: #ddd;
+}
+
+.progress-step.dark {
+  background-color: #444;
+}
+
+.progress-step.completed {
+  background-color: #007AFF;
 }
 
 .step-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.step-item.light {
+  background: #ffffff;
+}
+
+.step-item.dark {
+  background: #1a1a1a;
+}
+
+.step-item:hover {
+  transform: translateX(10px);
+  border-color: #007AFF;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.1);
+}
+
+.step-item.active.light {
+  background: #f8f9fa;
+  border-color: #007AFF;
+}
+
+.step-item.active.dark {
+  background: #2a2a2a;
+  border-color: #007AFF;
 }
 
 .step-number {
-  flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  color: white;
-  transition: background-color 0.3s;
+  min-width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .step-number.light {
-  background-color: #3b82f6;
+  background: #f8f9fa;
+  color: #333;
 }
 
 .step-number.dark {
-  background-color: #2563eb;
+  background: #333;
+  color: #fff;
+}
+
+.step-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .step-content {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .step-title {
+  margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+}
+
+.step-title.light {
+  color: #333;
+}
+
+.step-title.dark {
+  color: #fff;
 }
 
 .step-description {
-  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.step-description.light {
+  color: #666;
+}
+
+.step-description.dark {
+  color: #aaa;
+}
+
+.step-item.active .step-number {
+  background: #007AFF;
+  color: white;
+  transform: scale(1.1);
+}
+
+.step-item.hovered .step-number {
+  transform: scale(1.05);
 }
 
 /* Platforms Section Styles */
